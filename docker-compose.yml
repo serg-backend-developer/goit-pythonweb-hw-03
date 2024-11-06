@@ -1,0 +1,11 @@
+services:
+  app:
+    build: ./FullStack-Web-Development-hw3
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./FullStack-Web-Development-hw3/storage:/app/storage
+    environment:
+      - STORAGE_DIR=/app/storage
+      - DATA_FILE=/app/storage/data.json
+      - PORT=3000
